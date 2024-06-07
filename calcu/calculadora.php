@@ -17,6 +17,7 @@
         <label for="operacion">Operación:</label>
         <select name="operacion" id="operacion">
             <option value="sumar">Sumar</option>
+            <option value="multiplicar">Multiplicar</option>
         </select>
         <br><br>
         <input type="submit" value="Calcular">
@@ -34,6 +35,9 @@
         switch ($operacion) {
             case "sumar":
                 $resultado = $num1 + $num2;
+                break;
+            case "multiplicar":
+                $resultado = $num1 * $num2;
                 break;
             default:
                 $resultado = "Error: Operación no válida";
