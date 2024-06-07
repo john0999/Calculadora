@@ -17,6 +17,7 @@
         <label for="operacion">Operación:</label>
         <select name="operacion" id="operacion">
             <option value="sumar">Sumar</option>
+            <option value="dividir">Dividir</option>
         </select>
         <br><br>
         <input type="submit" value="Calcular">
@@ -34,6 +35,13 @@
         switch ($operacion) {
             case "sumar":
                 $resultado = $num1 + $num2;
+                break;
+            case "dividir":
+                if ($num2 != 0) {
+                    $resultado = $num1 / $num2;
+                } else {
+                    $resultado = "Error: No se puede dividir por cero";
+                }
                 break;
             default:
                 $resultado = "Error: Operación no válida";
